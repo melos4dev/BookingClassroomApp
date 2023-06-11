@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "232613619323",
+    "project_id": "aulastubalcain",
+    "storage_bucket": "aulastubalcain.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:232613619323:android:e5ecef815132205773a4de",
+        "android_client_info": {
+          "package_name": "com.melos4dev.bookingclassroomapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "232613619323-iv1d7p1g7i8bpfsqijdm9un5p0kac343.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4sOBuriLUXmWnynggwVa5SZALEW4_pI8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "232613619323-iv1d7p1g7i8bpfsqijdm9un5p0kac343.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
