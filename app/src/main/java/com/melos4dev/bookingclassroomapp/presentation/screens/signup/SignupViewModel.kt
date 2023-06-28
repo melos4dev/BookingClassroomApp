@@ -11,7 +11,6 @@ import com.melos4dev.bookingclassroomapp.domain.model.User
 import com.melos4dev.bookingclassroomapp.domain.use_cases.auth.AuthUseCases
 import com.melos4dev.bookingclassroomapp.domain.use_cases.users.UsersUseCases
 import com.google.firebase.auth.FirebaseUser
-import com.melos4dev.bookingclassroomapp.presentation.screens.signup.SignupState
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -31,6 +30,7 @@ class SignupViewModel @Inject constructor(
         private set
     var usernameErrMsg by mutableStateOf("")
         private set
+
 
     // EMAIL
     var isEmailValid by mutableStateOf(false)
@@ -125,12 +125,14 @@ class SignupViewModel @Inject constructor(
 
     fun validateEmail() {
         // ES UN EMAIL VALIDO
-        if (Patterns.EMAIL_ADDRESS.matcher(state.email).matches()) {
+        if (Patterns.EMAIL_ADDRESS.matcher(state.email)
+                .matches() && state.email.contains("@iestubalcain.net")
+        ) {
             isEmailValid = true
             emailErrMsg = ""
         } else {
             isEmailValid = false
-            emailErrMsg = "El email no es válido"
+            emailErrMsg = "El email no es válido o no designado por el centro"
         }
 
         enabledLoginButton()
@@ -142,11 +144,21 @@ class SignupViewModel @Inject constructor(
             passwordErrMsg = ""
         } else {
             isPasswordValid = false
-            passwordErrMsg = "Al menos 6 carácteres"
+            passwordErrMsg = "Al menos 6 caracteres"
         }
 
         enabledLoginButton()
     }
+    //////////////////////////////////////////////////////////////
+    /*  fun validateTubalcain(){
+          if(user.email.contains("tubalcain.net") ){
+              isTubalcain = true
+          }else {
+              isTubalcain = false
+              emailErrMsg = "El email no es correcto"
+          }
+          enabledLoginButton()
+      }*/
 
 
 }

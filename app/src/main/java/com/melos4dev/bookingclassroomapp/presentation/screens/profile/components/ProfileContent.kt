@@ -95,7 +95,7 @@ fun ProfileContent(
             Spacer(modifier = Modifier.size(16.dp))
             Text(
                 text = viewModel.userData.email,
-                fontSize = 24.sp,
+                fontSize = 16.sp,
                 fontWeight = FontWeight.Bold,
                 color = SecondaryTextColor,
                 fontStyle = FontStyle.Italic

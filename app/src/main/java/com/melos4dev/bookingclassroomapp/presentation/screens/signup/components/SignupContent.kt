@@ -71,7 +71,6 @@ fun SignupContent(navController: NavHostController, viewModel: SignupViewModel =
         Card(
             modifier = Modifier
                 .padding(start = 40.dp, end = 40.dp, top = 200.dp)
-                .verticalScroll(rememberScrollState())
                 .border(
                     BorderStroke(2.dp, color = DarkPrimaryColor),
                     shape = RoundedCornerShape(16.dp)

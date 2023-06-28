@@ -11,7 +11,7 @@ import com.melos4dev.bookingclassroomapp.presentation.components.DefaultTopBar
 import com.melos4dev.bookingclassroomapp.presentation.screens.signup.components.Signup
 import com.melos4dev.bookingclassroomapp.presentation.screens.signup.components.SignupContent
 
-@OptIn(ExperimentalMaterial3Api::class)
+
 @Composable
 fun SignupScreen(navController: NavHostController) {
 
@@ -29,6 +29,6 @@ fun SignupScreen(navController: NavHostController) {
         Box(modifier = Modifier.padding(contentPadding)) { SignupContent(navController = navController) }
     }
 
-    Signup(navController = navController)
+   Signup(navController = navController)
 }
 
